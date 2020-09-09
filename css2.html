@@ -67,7 +67,47 @@ div p .im3:hover{
 div p:hover{
 	background:white;
 }
-
+ .log{
+ 	width: 100px;
+ 	height: 100px;
+ 	position: absolute;
+ 	bottom:100px;
+ 	left:100px;
+ 	animation: he 5s linear 0s infinite;
+ }
+ @keyframes he {
+	0%{ 
+		left: 100px;
+		bottom: 100px;
+		opacity: 1;
+		transform:rotateX(-10deg) rotateY(0deg);
+	}
+	20%{
+		left: 300px;
+		bottom: 300px;
+		opacity: 0;
+		transform:rotateX(-10deg) rotateY(360deg);
+}
+40%{
+		left: 500px;
+		bottom: 500px;
+		opacity: 1;
+		transform:rotateX(-10deg) rotateY(360deg);
+}	
+60%{
+		left: 800px;
+		bottom: 300px;
+		opacity: 0.4;
+		
+}
+80%{
+		left: 1100px;
+		bottom: 100px;
+		transform: scale(2,2);
+		opacity: 2;
+		
+}
+}
 
 </style>
 <body>
@@ -80,6 +120,8 @@ div p:hover{
 	<img src="img/1.png" class="im3"  id="1m3">
 </p>
 </div>
+<img src="img/1.gif" alt="" class="log" id="log">
+
 </body>
 <script type="text/javascript">
 
@@ -108,6 +150,9 @@ div p:hover{
 	document.getElementById('1m3').onmouseleave=function(){
 		
 	document.getElementById('tt').innerHTML="头博";
+	}
+	document.getElementById('log').onmouseenter=function(){
+			document.getElementById('tt2').innerHTML="你~抓不到我~";
 	}
 </script>
 </html>
