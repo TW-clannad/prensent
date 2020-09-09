@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	background: #ccc;
+	animation: change 5s linear 0s infinite alternate;
+}
+div{
+	width: 1000px ;
+	height:600px ;
+	margin:100px auto ;
+	border:1px solid #000 ;
+	
+    overflow: hidden;
+}
+@keyframes change{
+	0%{
+		background-color:skyblue;
+	}
+	20%{
+		background-color:red;
+	}
+	40%{
+		background-color:yellow;
+	}
+	60%{
+		background-color:black;
+	}
+}
+div p{
+
+	list-style: none ;
+	width: 1000px ;
+	height:600px ;
+	background:#ccc ;
+	float:left ;
+/*	overflow: hidden;*/
+	perspective: 500px;/*写在父亲元素内*/
+	transition: background 1s ;
+}
+
+div p img{
+	margin-left: 30px;
+	width: 300px ;
+	height:600px ;
+	transform-origin: center bottom;
+	transition: transform 1s ;
+}
+div p .im1:hover{
+	transform: rotateX(45deg);
+}
+div p .im2:hover{
+	transform: rotateX(90deg);
+}
+div p .im3:hover{
+	transform: rotateX(100deg);
+}
+div p:hover{
+	background:white;
+}
+
+
+</style>
+<body>
+<h1 id="tt">头博</h1>
+<marquee  direction="lefr" scrollamount="30" behavior="alternate" ><h1 style="color:red " id="tt2">打do吗？</h1></marquee>
+<div>
+	<p>
+	<img src="img/1.jpg" class="im1"  id="1m1">
+	<img src="img/2.jpg" class="im2"  id="1m2">
+	<img src="img/1.png" class="im3"  id="1m3">
+</p>
+</div>
+</body>
+<script type="text/javascript">
+
+	document.getElementById('1m1').onmouseenter=function(){
+		
+	document.getElementById('tt').innerHTML="头博推到了亚丝娜，但是还没有打do";
+	document.getElementById('tt2').innerHTML="咦~";
+
+	}
+	document.getElementById('1m1').onmouseleave=function(){
+		
+	document.getElementById('tt').innerHTML="头博";
+	}
+	document.getElementById('1m2').onmouseenter=function(){
+		
+	document.getElementById('tt').innerHTML="头博推到了狂三，真坏";
+	}
+	document.getElementById('1m2').onmouseleave=function(){
+		
+	document.getElementById('tt').innerHTML="头博";
+	}
+	document.getElementById('1m3').onmouseenter=function(){
+		
+	document.getElementById('tt').innerHTML="头博，你怎么连yousa都。。。。";
+	}
+	document.getElementById('1m3').onmouseleave=function(){
+		
+	document.getElementById('tt').innerHTML="头博";
+	}
+</script>
+</html>
